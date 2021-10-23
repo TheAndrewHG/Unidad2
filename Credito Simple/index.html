@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crédito Simple</title>
+    <style>
+        body{
+			background: #E3E5EB;
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.tabla{
+            border-collapse: inherit;	
+			border-radius: 10px;
+			box-shadow: 0px 0px 20px rgba(3, 36, 68, 0.16);
+			text-align: center;
+        }
+		.tabla thead{
+			font-weight: bold;
+			font-size: 20px;
+		}
+        .tabla th{
+            border-style: solid;
+            border-color: black;
+        }
+        .tabla tbody{
+            font-size: 15px;
+            border-style: solid;
+            border-color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <body>
+        <div>
+            <div>
+                <div>
+                    <h2 class="h2"><i class="bi bi-calculator"></i>Crédito Simple</h2>
+                    <div>
+                        <label for="monto">Monto</label>
+                        <input type="text" class="form-control" id="monto" placeholder="Ingresar monto">
+                    </div>
+                    <div>
+                        <label for="tiempo">Tiempo en Meses</label>
+                        <input type="number" class="form-control" id="tiempo" placeholder="Ingresar cantidad de meses" min="1" value="1">
+                    </div>
+                    <div>
+                        <label for="interes">Interés Anual %</label>
+                        <input type="text" class="form-control" id="tasaInteres" placeholder="Ingresar tasa de interés mensual">
+                    </div>
+                    <div>
+                        <label for="interes">Fecha De Disposición</label>
+                        <input type="date" class="form-control" id="fechaDisposicion" placeholder="Ingresar fecha de disposición">
+                    </div>
+                    <div>
+                        <label for="interes">Cálculo del Pago</label>
+                        <input type="number" class="form-control" id="pago" placeholder="0" disabled="true">
+                    </div>
+                    <div hidden id="alert-error">
+                        Debes llenar todos los campos
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btnCalcular">Calcular</button>
+                </div>
+                <div>
+
+                </div>
+                <div>
+                    <table id="lista-tabla" class="tabla">
+                        <thead>
+                            <tr>
+                                <th>Periodo</th>
+                                <th>Fecha Inicio</th>
+                                <th>Fecha Final</th>
+                                <th>Días</th>
+                                <th>Disposición</th>
+                                <th>Saldo Insólito</th>
+                                <th>Comisión</th>
+                                <th>Amortización</th>
+                                <th>Interés</th>
+                                <th>Moratorios</th>
+                                <th>IVA</th>
+                                <th>Flujo</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script src="dayjs.min.js"></script>
+        <script src="main.js"></script>    
+</body>
+</html>
